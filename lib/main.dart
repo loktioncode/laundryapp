@@ -11,7 +11,6 @@ void main() => runApp(MaterialApp(
         primaryColorLight: Colors.lightGreen[200]),
     debugShowCheckedModeBanner: false,
     home: HomePage()));
-    
 
 class HomePage extends StatefulWidget {
   @override
