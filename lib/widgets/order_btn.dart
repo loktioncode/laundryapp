@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:page_transition/page_transition.dart';
+import '../laundries.dart';
 
 class OrderRoundedButton extends StatelessWidget {
   OrderRoundedButton(this.orderTotal, this.proceedOrder);
@@ -208,7 +210,13 @@ class OrderRoundedButton extends StatelessWidget {
               child: InkWell(
                 splashColor: Colors.deepPurple,
                 onTap: () {
-                  _modalBottomSheetMenu(context);
+                  // _modalBottomSheetMenu(context);
+                  Navigator.push(
+                      context,
+                      PageTransition(
+                          duration: Duration(seconds: 1),
+                          type: PageTransitionType.downToUp,
+                          child: Laundries()));
                 },
                 child: Container(
                   decoration: BoxDecoration(
